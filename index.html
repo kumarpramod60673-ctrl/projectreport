@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Project Reports</title>
+
+<style>
+body {
+font-family: Arial;
+margin: 0;
+background: #f4f6fb;
+text-align: center;
+}
+
+header {
+background: #4b49ac;
+color: white;
+padding: 20px;
+}
+
+section {
+padding: 30px;
+}
+
+.card {
+background: white;
+padding: 20px;
+margin: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, select {
+padding: 10px;
+width: 80%;
+margin: 8px;
+}
+
+button {
+padding: 12px 25px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+background: #25D366;
+color: white;
+}
+
+.payment {
+background: orange;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Prime Project Reports</h1>
+<p>Loan & Business Project Report Services</p>
+</header>
+
+<section>
+
+<div class="card">
+<h2>Project Report Price Plans</h2>
+
+<select id="price">
+<option value="Basic Plan - 2999 + GST">Basic Plan - ₹2999 + GST</option>
+<option value="Advance Plan - 4999 + GST">Advance Plan - ₹4999 + GST</option>
+</select>
+</div>
+
+<div class="card">
+<h2>Order Project Report</h2>
+
+<input type="text" id="name" placeholder="Your Name"><br>
+<input type="text" id="business" placeholder="Business Type"><br>
+<input type="file" id="file"><br>
+
+<button onclick="sendWhatsApp()">Send Order on WhatsApp</button>
+
+<br><br>
+
+<button class="payment" onclick="window.open('https://rzp.io/l/yourpaymentlink')">
+Pay Advance
+</button>
+
+</div>
+
+</section>
+
+<script>
+function sendWhatsApp() {
+
+let name = document.getElementById("name").value;
+let business = document.getElementById("business").value;
+let price = document.getElementById("price").value;
+
+let message = `Hello, I want Project Report
+Name: ${name}
+Business: ${business}
+Selected Plan: ${price}`;
+
+let phone = "916376576447";
+
+window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
+}
+</script>
+
+</body>
+</html>
